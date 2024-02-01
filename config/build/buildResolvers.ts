@@ -1,5 +1,5 @@
 export const buildResolvers = () => {
     return  {
-        extensions: ['.ts', 'tsx','.js']
+        extensions: ['.ts', '.tsx','.js']
     }
 }
