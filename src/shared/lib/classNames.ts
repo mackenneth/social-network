@@ -4,7 +4,7 @@ export const classNames = (className: string, mods: Record<string, boolean | str
         ...Object.entries(mods)
             .filter(([cls, value]) => !!value)
             .map(([cls]) => cls),
-        ...additional
+        ...additional.filter(value => !!value),
     ].join(' ')
 
 }
