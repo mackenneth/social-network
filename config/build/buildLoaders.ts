@@ -32,9 +32,18 @@ export const buildLoaders = (options: BuildOptions): Array<webpack.RuleSetRule> 
         use: ['@svgr/webpack'],
     }
 
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|webp|woff|woff2|eot|ttf|otf)$/i,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]',
+        },
+    }
+
     return [
         tsLoader,
         sassLoader,
         svgLoader,
+        fileLoader,
     ]
 }
