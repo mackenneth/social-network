@@ -1,0 +1,25 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width-expanded);
+  background: var(--secondary-color);
+  box-shadow: #4A4A4A 0px 2px 4px 0px, #4A4A4A 0px 2px 16px 0px;
+  transition: width 0.25s ease-in-out;
+  padding: 10px;
+
+  &__button {
+    &_collapsed {
+        align-self: center;
+    }
+    &_expanded {
+      margin-left: auto;
+    }
+  }
+
+  &_collapsed {
+    width: var(--sidebar-width-collapsed);
+  }
+}
+
