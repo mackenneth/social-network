@@ -15,7 +15,7 @@ export const buildPlugins = (options: BuildOptions): Array<webpack.WebpackPlugin
             chunkFilename: 'css/[name].[contenthash].css'
         }),
         new webpack.DefinePlugin({
-            __APP_ENV__: JSON.stringify(options.isDev),
+            __IS_DEV__: JSON.stringify(options.isDev),
         })
     ]
 }
