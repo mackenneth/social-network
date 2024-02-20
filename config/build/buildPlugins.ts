@@ -13,6 +13,9 @@ export const buildPlugins = (options: BuildOptions): Array<webpack.WebpackPlugin
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
             chunkFilename: 'css/[name].[contenthash].css'
+        }),
+        new webpack.DefinePlugin({
+            __APP_ENV__: JSON.stringify(options.isDev),
         })
     ]
 }
